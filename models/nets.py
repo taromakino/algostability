@@ -633,7 +633,7 @@ class ResnetEncoder(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.num_classes = config.model.num_classes
-        self.image_size = im = config.data.image_size
+        self.image_size = config.data.image_size
         self.n_channels = in_channels = config.data.channels
         self.channels_multiplier = channels_multiplier = config.model.ngf
         self.activation = F.relu
